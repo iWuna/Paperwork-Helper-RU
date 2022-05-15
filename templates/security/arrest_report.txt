@@ -1,5 +1,6 @@
-[grid][row][cell]     [logo][cell][small]Форма NanoTrasen NT-SEC-ARS[/small]ᅠᅠᅠ          [small]Время: [time][/small]
-[small][station][/small]ᅠᅠᅠᅠᅠᅠᅠᅠᅠ[small]Год: 2566[/small]
+[grid][row][cell]     [logo][cell][small]Форма NanoTrasen NT-SEC-ARS[/small]
+[br][small]Время: [time][/small][br]
+[small]Год: 2566[/small]
 [br][i][large][b]Ордер на арест[b][/large][/i][/grid][hr]На основании показаний, высказанными следующими лицами:[br][field]
 [br]Статус члена экипажа — [field] был сменен на Арест, с причиной — [field]
 [br][i][small]

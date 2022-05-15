@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>SS13 Paperwork Simulator</title>
+    <title>Бухгалтерия 1NT</title>
     <meta charset="UTF-8"> 
     <link rel="shortcut icon" href="favicon.png" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -19,20 +19,20 @@
 </head>
 <body>
     <div id="menu">
-        <legend>PAPERWORK SIMULATOR <span id="year">23XX</span></legend>
+        <legend>ОНЛАЙН БУХГАЛТЕРИЯ 1NT <span id="year">23XX</span></legend>
         <div class="controlgroup">
             <ul id="template"></ul>
             <button
                 class="control has-tooltip"
                 id="load"
-                title="Load Template"
+                title="Загрузить заготовку"
             >
                 <i class="fa fa-folder-open"></i>
             </button>
             <button
                 class="control has-tooltip"
                 id="save"
-                title="Save As File"
+                title="Сохранить файлом"
             >
                 <i class="fa fa-save"></i>
             </button>
@@ -41,7 +41,7 @@
             <button
                 class="control has-tooltip"
                 onclick="addBlock('b')"
-                title="Bold (Ctrl+B)"
+                title="Жирный (Ctrl+B)"
             >
                 <i class="fa fa-bold"></i>
             </button>
@@ -55,56 +55,56 @@
             <button
                 class="control has-tooltip"
                 onclick="addBlock('u')"
-                title="Underline (Ctrl+U)"
+                title="Подчеркивание (Ctrl+U)"
             >
                 <i class="fa fa-underline"></i>
             </button>
             <button
                 class="control has-tooltip"
                 onclick="addBlock('center')"
-                title="Center (Ctrl+E)"
+                title="Центрировать (Ctrl+E)"
             >
                 <i class="fa fa-align-center"></i>
             </button>
             <button
                 class="control has-tooltip"
                 onclick="addBlock('list')"
-                title="List"
+                title="Список"
             >
                 <i class="fa fa-list-ul"></i>
             </button>
             <button
                 class="control has-tooltip"
                 onclick="addBlock('table')"
-                title="Table"
+                title="Таблица"
             >
                 <i class="fa fa-table"></i>
             </button>
             <button
                 class="control has-tooltip"
                 onclick="addBlock('time')"
-                title="Time"
+                title="Время"
             >
                 <i class="fa fa-clock"></i>
             </button>
             <button
                 class="control has-tooltip"
                 onclick="addBlock('date')"
-                title="Date"
+                title="Дата"
             >
                 <i class="fa fa-calendar"></i>
             </button>
             <button
                 class="control has-tooltip"
                 onclick="addBlock('sign')"
-                title="Sign"
+                title="Подпись"
             >
                 <i class="fa fa-file-signature"></i>
             </button>
             <button
                 class="control has-tooltip"
                 onclick="addBlock('large')"
-                title="Large (Ctrl+Shift+&gt;)"
+                title="Больше (Ctrl+Shift+&gt;)"
             >
                 <span>
                     <i class="fa fa-font"></i>
@@ -114,7 +114,7 @@
             <button
                 class="control has-tooltip"
                 onclick="addBlock('small')"
-                title="Small (Ctrl+Shift+&lt;)"
+                title="Меньше (Ctrl+Shift+&lt;)"
             >
                 <span>
                     <i class="fa fa-font fa-xs"></i>
@@ -126,14 +126,14 @@
             <button
                 id='settings-btn'
                 class="control has-tooltip"
-                title="Preview Settings"
+                title="Настройки предосмотра"
             >
                 <i class="fa fa-cog"></i>
             </button>
             <button
                 id='credits-btn'
                 class="control has-tooltip"
-                title="Contributors"
+                title="Создатели"
             >
                 <i class="fa fa-book-open"></i>
             </button>
@@ -151,43 +151,43 @@
             <div id="output"></div>
         </div>
     </div>
-    <div id="settings-dialog" title="Preview Settings">
+    <div id="settings-dialog" title="Настройки предосмотра">
         <div class="input-field">
             <input id="pen-checkbox" type="checkbox" checked/>
-            <label for="pen-checkbox">Has pen?</label>
+            <label for="pen-checkbox">Есть ручка?</label>
             <i class="fa fa-question-circle has-tooltip" title="shows a 'write...' prompt where applicable"></i>
         </div>
         <div class="input-field">
             <input id="filled-checkbox" type="checkbox"/>
-            <label for="filled-checkbox">Filled fields?</label>
+            <label for="filled-checkbox">Заполнять поля?</label>
             <i class="fa fa-question-circle has-tooltip" title="shows sample text in all [field]s"></i>
         </div>
         <div class="input-field">
-            <label for="pen-style-select">Pen style</label>
+            <label for="pen-style-select">Стиль</label>
             <select id="pen-style-select">
-                <option value="Verdana, sans-serif" selected>Pen</option>
-                <option value="Comic Sans MS, sans-serif">Crayon</option>
-                <option value="Segoe Script, sans-serif">Fancy</option>
+                <option value="Verdana, sans-serif" selected>Ручка</option>
+                <option value="Comic Sans MS, sans-serif">Мелок</option>
+                <option value="Segoe Script, sans-serif">Стильная ручка</option>
             </select>
             <i class="fa fa-question-circle has-tooltip" title="affects typeface"></i>
         </div>
         <div class="input-field">
-            <label for="pen-color-select">Pen color</label>
+            <label for="pen-color-select">Цвет ручки</label>
             <select id="pen-color-select">
-                <option value="" selected>Black/Default</option>    <!-- Black ink uses default text color -->
-                <option value="#ff0000">Red</option>
-                <option value="#0000ff">Blue</option>
-                <option value="#00ff00">Green</option>
-                <option value="#ff00ff">Pink</option>
-                <option value="#ff9900">Orange</option>
-                <option value="#00ffff">Cyan</option>
-                <option value="" >Invisible</option>                <!-- Invisible ink uses background color -->
-                <option value="#1c1713">Fancy</option>
+                <option value="" selected>Черный/Default</option>    <!-- Black ink uses default text color -->
+                <option value="#ff0000">Красный</option>
+                <option value="#0000ff">Голубой</option>
+                <option value="#00ff00">Зеленый</option>
+                <option value="#ff00ff">Розовый</option>
+                <option value="#ff9900">Оранжевый</option>
+                <option value="#00ffff">Бирюзовый</option>
+                <option value="" >Невидимка</option>                <!-- Invisible ink uses background color -->
+                <option value="#1c1713">Стильно</option>
             </select>
             <i class="fa fa-question-circle has-tooltip" title="affects text color"></i>
         </div>
         <div class="input-field">
-            <label for="dark-theme-checkbox">UI theme</label>
+            <label for="dark-theme-checkbox">Интерфейс</label>
             <select id="theme-select">
                 <option value="" selected>Default (light)</option>
                 <option value="solarized-theme">Solarized (dark)</option>

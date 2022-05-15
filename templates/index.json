@@ -64,7 +64,7 @@
         "Xenoflora Report": "research/xenoflora.txt"
     },
     "Security": {
-        "Arrest Report": "security/arrest_report.txt",
+        "Отчёт об аресте": "security/arrest_report.txt",
         "Hot Sheet": "security/hot_sheet.txt",
         "Incident Report": "security/incident_report.txt",
         "Patrol Assignment": "security/patrol_assignment.txt",
