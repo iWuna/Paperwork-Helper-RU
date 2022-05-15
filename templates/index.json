@@ -72,7 +72,8 @@
         "POI Watchlist": "security/personnel_watchlist.txt",
         "POI Watchlist (Alternate)": "security/personnel_watchlist2.txt",
         "SECARM Inventory": "security/secarm_inventory.txt",
-        "Shift Report": "security/shift_report.txt"
+        "Shift Report": "security/shift_report.txt",
+        "Разрешение на оружие": "security/weapon_permit.txt"
     },
     "Supply": {
         "Docked Vessel": "supply/docked_vessel.txt",
